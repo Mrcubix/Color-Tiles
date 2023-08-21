@@ -35,11 +35,13 @@ Game Over:
 This is a self-contained application, there are no installers provided.
 Packages for linux are not available yet, don't know enough to make them.
 
-**Note**: Make sure you extract the zip file, ideally in its own folder.
+**Note**: For windows & linux, make sure you extract the zip file, ideally in its own folder.
 
 You should have something like this once extracted:
 
 ![Image of file structure](https://i.imgur.com/GjcVF8N.png)
+
+For MacOS users, i'm sorry but you will have to deal with Apple's Gatekeeper.
 
 ## How to build
 
