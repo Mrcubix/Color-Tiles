@@ -27,5 +27,5 @@ Some Sprites may also need to be remade to suit these translations,
 - Some audio files are missing for whenever tiles are removed or the game is over, ideally, those should be made from scratch, nothing too complex,
 - A better icon for the game,
 - Maybe a better tileset,
-- A reset button if you want to retry spam like ed 
+- A reset button if you want to retry spam like ed   
 ![bmc](https://cdn.7tv.app/emote/643ce6a2ce9e08be709d62c1/4x.webp)
