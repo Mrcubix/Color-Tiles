@@ -3,6 +3,10 @@
 This is a modern clone of the classic game Color Tiles from [en.gamesaien.com](https://en.gamesaien.com/).
 This game is made in Godot 4 using C# as it is my main language.
 
+## Dependencies
+
+- .NET 6 **Desktop Runtime**: [Link](https://dotnet.microsoft.com/en-us/download/dotnet/6.0#:~:text=x86-,.NET%20Desktop%20Runtime%206.0.21,-The%20.NET%20Desktop) | [Fallback Link](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+
 ## How to play
 
 - Click on an empty tile,
@@ -11,6 +15,11 @@ This game is made in Godot 4 using C# as it is my main language.
 - the goal of this game is to get the highest score possible in 120 seconds.
 
 ![Instruction image from gamesaien.com](https://en.gamesaien.com/game/color_tiles/color_tiles_zu01.png)
+
+## How to Install
+
+This is a self-contained application, there are no installers provided.
+Packages for linux are not available yet, don't know enough to make them.
 
 ## How to build
 
