@@ -16,10 +16,30 @@ This game is made in Godot 4 using C# as it is my main language.
 
 ![Instruction image from gamesaien.com](https://en.gamesaien.com/game/color_tiles/color_tiles_zu01.png)
 
+## Previews
+
+Main Menu:
+
+![Image of the main menu](https://i.imgur.com/nR1o1Gd.png)
+
+Gameplay:
+
+![Image of an ongoing game](https://i.imgur.com/uUooXwI.png)
+
+Game Over:
+
+![Image of the game over screen](https://i.imgur.com/975m1ft.png)
+
 ## How to Install
 
 This is a self-contained application, there are no installers provided.
 Packages for linux are not available yet, don't know enough to make them.
+
+**Note**: Make sure you extract the zip file, ideally in its own folder.
+
+You should have something like this once extracted:
+
+![Image of file structure](https://i.imgur.com/GjcVF8N.png)
 
 ## How to build
 
