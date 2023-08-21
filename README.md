@@ -7,6 +7,10 @@ This game is made in Godot 4 using C# as it is my main language.
 
 - .NET 6 **Desktop Runtime**: [Link](https://dotnet.microsoft.com/en-us/download/dotnet/6.0#:~:text=x86-,.NET%20Desktop%20Runtime%206.0.21,-The%20.NET%20Desktop) | [Fallback Link](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
+## Download
+
+You can get the latest release of the game [here](https://github.com/Mrcubix/Color-Tiles/releases/latest).
+
 ## How to play
 
 - Click on an empty tile,
