@@ -77,6 +77,8 @@ namespace ColorTiles
                 }
             }
 
+            Board.IsEnabled = true;
+
             HUD.Reset();
             HUD.Show();
         }
@@ -110,6 +112,9 @@ namespace ColorTiles
 
         private void OnTimeExpired(object sender, EventArgs e)
         {
+            // Disable the Board
+            Board.IsEnabled = false;
+
             // Hide the HUD
             HUD.Hide();
 

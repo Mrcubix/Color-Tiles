@@ -14,12 +14,11 @@ namespace ColorTiles.UX
 		public const int OFFSET_Y = 0;
 		public static readonly Vector2I Offset = new(OFFSET_X, OFFSET_Y);
 
-		[Export]
-		public MainMenu MainMenu { get; set; }
-
 		public ColorTile[,] Rows { get; private set; }
 		public int Width { get; private set; }
 		public int Height { get; private set; }
+
+		public bool IsEnabled { get; set; } = false;
 
 		public event EventHandler<int> MatchesFound;
 		public event EventHandler OnPenalty;
@@ -55,7 +54,7 @@ namespace ColorTiles.UX
 		{
 			base._Input(@event);
 
-			if (MainMenu.IsVisibleInTree())
+			if (!IsEnabled)
 				return;
 
 			if (@event is InputEventMouseButton mouseEvent)
