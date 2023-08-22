@@ -200,22 +200,22 @@ namespace ColorTiles.UX
 					if (tile.AtlasCoordinates == otherTile.AtlasCoordinates)
 					{
 						subjectForRemoval.Add(otherTile);
-
-						// remove the tile from the board
-						Rows[otherTile.Position.X, otherTile.Position.Y] = null;
-
-						// tiles are not scene objects, no need for queue_free()
 					}
 				}
 			}
 
 			// remove the subject tiles
 			foreach (var tile in subjectForRemoval)
-			{
-				SetCell(1, tile.Position);
-			}
+				RemoveTile(tile.Position);
 
 			return subjectForRemoval.Count;
+		}
+
+		public void RemoveTile(Vector2I position)
+		{
+			Rows[position.X, position.Y] = null;
+			SetCell(1, position);
+			// tiles are not scene objects here, no need for queue_free()
 		}
 
 		/// <summary>
