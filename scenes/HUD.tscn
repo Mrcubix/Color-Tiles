@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd4ov4mttg2jc"]
+[gd_scene load_steps=5 format=3 uid="uid://bd4ov4mttg2jc"]
 
 [ext_resource type="Script" path="res://src/UX/HUD.cs" id="1_7ywgi"]
+[ext_resource type="Theme" uid="uid://bsva223veev8n" path="res://Assets/themes/ButtonTheme.tres" id="2_k601e"]
 
 [sub_resource type="SystemFont" id="SystemFont_p58gj"]
 font_names = PackedStringArray("Roboto", "Arial", "Consolas", "Sans-Serif")
@@ -11,7 +12,7 @@ font = SubResource("SystemFont_p58gj")
 font_size = 30
 font_color = Color(1, 0, 0, 1)
 
-[node name="HUD" type="Control" node_paths=PackedStringArray("ScoreLabel", "TimerBar")]
+[node name="HUD" type="Control" node_paths=PackedStringArray("ScoreLabel", "TimerBar", "ResetButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_7ywgi")
 ScoreLabel = NodePath("Score")
 TimerBar = NodePath("TimerBar")
+ResetButton = NodePath("Button")
 
 [node name="TimerBar" type="ColorRect" parent="."]
 layout_mode = 1
@@ -39,3 +41,21 @@ grow_horizontal = 0
 text = "0"
 label_settings = SubResource("LabelSettings_ejyy8")
 horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -51.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_k601e")
+text = "Reset"
+
+[connection signal="pressed" from="Button" to="." method="OnResetButtonPressed"]

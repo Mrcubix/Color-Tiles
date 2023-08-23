@@ -13,10 +13,13 @@ public partial class HUD : Control
 	public Label ScoreLabel { get; set; }
 	[Export]
 	public ColorRect TimerBar { get; set; }
+	[Export]
+	public Button ResetButton { get; set; }
 
 	public double InitialTime { get; set; }
 	public int InitialScore { get; set; }
 
+	public event EventHandler ResetClicked = null!;
 
 	public double Time
 	{
@@ -52,6 +55,8 @@ public partial class HUD : Control
 	public event EventHandler<double> TimeChanged = null!;
 	public event EventHandler TimeExpired = null!;
 
+	#region Constructors
+
 	public HUD()
 	{
 		InitialScore = 0;
@@ -79,6 +84,10 @@ public partial class HUD : Control
 		IsActive = true;
 	}
 
+	#endregion
+
+	#region Overridden Methods
+
 	public override void _Ready()
 	{
 		ScoreLabel.Text = Score.ToString();
@@ -103,6 +112,8 @@ public partial class HUD : Control
 		TimerBar.Size = new Vector2((float)(Time / 120) * SIZE_X, SIZE_Y);
 	}
 
+	#endregion
+
 	/// <summary>
 	///   Resets the HUD to its initial values.
 	/// </summary>
@@ -114,5 +125,10 @@ public partial class HUD : Control
 		Score = InitialScore;
 		Time = InitialTime;
 		IsActive = true;
+	}
+
+	public void OnResetButtonPressed()
+	{
+		ResetClicked?.Invoke(this, EventArgs.Empty);
 	}
 }

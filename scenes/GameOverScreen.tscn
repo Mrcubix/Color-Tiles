@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwcuauxuo53nm"]
+[gd_scene load_steps=8 format=3 uid="uid://cwcuauxuo53nm"]
 
 [ext_resource type="Script" path="res://src/UX/Menus/GameOverScreen.cs" id="1_613xb"]
 [ext_resource type="Texture2D" uid="uid://dpukab1l30sfb" path="res://Assets/Sprites/Spacer_224.png" id="2_4b00e"]
+[ext_resource type="Theme" uid="uid://bsva223veev8n" path="res://Assets/themes/ButtonTheme.tres" id="3_aoyqf"]
 
 [sub_resource type="SystemFont" id="SystemFont_tnhab"]
 font_names = PackedStringArray("Roboto", "Arial", "Consolas", "Sans-Serif")
@@ -28,26 +29,6 @@ outline_size = 20
 shadow_size = 16
 shadow_color = Color(0, 0, 0, 0.780392)
 shadow_offset = Vector2(3, 3)
-
-[sub_resource type="SystemFont" id="SystemFont_rs773"]
-font_names = PackedStringArray("Roboto", "Arial", "Consolas", "Sans-Serif")
-font_weight = 600
-generate_mipmaps = true
-subpixel_positioning = 0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2v4vl"]
-bg_color = Color(0.121569, 0.823529, 0.121569, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-shadow_size = 1
-anti_aliasing_size = 2.0
-
-[sub_resource type="Theme" id="Theme_hlme5"]
-Button/font_sizes/font_size = 32
-Button/fonts/font = SubResource("SystemFont_rs773")
-Button/styles/normal = SubResource("StyleBoxFlat_2v4vl")
 
 [node name="GameOverScreen" type="VBoxContainer" node_paths=PackedStringArray("ScoreLabel", "PlayAgainButton")]
 z_index = 2
@@ -89,13 +70,13 @@ texture = ExtResource("2_4b00e")
 [node name="PlayAgainButton" type="Button" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_hlme5")
+theme = ExtResource("3_aoyqf")
 text = "Play Again"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_hlme5")
+theme = ExtResource("3_aoyqf")
 text = "Quit W"
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="OnPlayAgainButtonPressed"]

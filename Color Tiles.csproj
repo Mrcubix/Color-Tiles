@@ -3,5 +3,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>ColorTiles</RootNamespace>
+    <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 </Project>

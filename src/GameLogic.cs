@@ -95,6 +95,17 @@ namespace ColorTiles
             MainMenu.Show();
         }
 
+        private void OnResetClicked(object sender, EventArgs e)
+        {
+            Board.IsEnabled = false;
+            HUD.IsActive = false;
+
+            // Hide the HUD
+            HUD.Hide();
+
+            OnPlayAgainClicked(sender, e);
+        }
+
         private void OnQuitClicked(object sender, EventArgs e)
         {
             GetTree().Quit();
@@ -172,6 +183,7 @@ namespace ColorTiles
 
             // Subscribe to the HUD's event
             HUD.TimeExpired += OnTimeExpired;
+            HUD.ResetClicked += OnResetClicked;
 
             // Subscribe to the GameOverScreen's event
             GameOverScreen.PlayAgainClicked += OnPlayAgainClicked;
@@ -252,6 +264,7 @@ namespace ColorTiles
 
             // Unsubscribe from the HUD's event
             HUD.TimeExpired -= OnTimeExpired;
+            HUD.ResetClicked -= OnResetClicked;
 
             // Unsubscribe from the GameOverScreen's event
             GameOverScreen.PlayAgainClicked -= OnPlayAgainClicked;

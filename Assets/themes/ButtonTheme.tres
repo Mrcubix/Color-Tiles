@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bsva223veev8n"]
+
+[sub_resource type="SystemFont" id="SystemFont_rs773"]
+font_names = PackedStringArray("Roboto", "Arial", "Consolas", "Sans-Serif")
+font_weight = 600
+generate_mipmaps = true
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2v4vl"]
+bg_color = Color(0.121569, 0.823529, 0.121569, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_size = 1
+anti_aliasing_size = 2.0
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = SubResource("SystemFont_rs773")
+Button/styles/normal = SubResource("StyleBoxFlat_2v4vl")
