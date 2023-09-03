@@ -13,6 +13,7 @@ config_version=5
 config/name="Color Tiles"
 run/main_scene="res://scenes/Game.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
+boot_splash/image="res://Assets/Sprites/icon_192.png"
 config/icon="res://Assets/Sprites/icon_192.png"
 
 [display]
