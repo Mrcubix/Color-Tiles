@@ -7,9 +7,12 @@ namespace ColorTiles.UX.Dialogs
 		[Export]
 		public ColorRect Background { get; set; }
 
+		public Control Container;
+
 		// Called when the node enters the scene tree for the first time.
 		public override void _Ready()
 		{
+			Container = GetParent<Control>();
 			Hide();
 		}
 
@@ -19,6 +22,7 @@ namespace ColorTiles.UX.Dialogs
 			DialogText = message;
 			OkButtonText = "Close";
 			
+			Container.Show();
 			Background.Show();
 			Show();
 

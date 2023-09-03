@@ -85,6 +85,10 @@ namespace ColorTiles.UX
 		public void OnBoardPressed(Vector2 position)
 		{
 			var tileMapPosition = LocalToMap(position);
+#if DEBUG
+			Console.WriteLine($"Clicked at {tileMapPosition}");
+			GD.Print($"Clicked at {tileMapPosition}");
+#endif
 
 			// the click wasn't within the bounds of the board
 			if (tileMapPosition.X < 0 || tileMapPosition.X >= Width || tileMapPosition.Y < 0 || tileMapPosition.Y >= Height)
