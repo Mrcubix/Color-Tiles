@@ -48,6 +48,7 @@ offset_right = 149.5
 offset_bottom = 359.988
 
 [node name="HUD" parent="UX" instance=ExtResource("4_0b2un")]
+visible = false
 layout_mode = 1
 
 [node name="Dialog" type="Control" parent="UX"]

@@ -54,6 +54,7 @@ text = "SCORE"
 label_settings = SubResource("LabelSettings_0pgdq")
 horizontal_alignment = 1
 vertical_alignment = 1
+language = "en_US"
 
 [node name="ScoreLabel" type="Label" parent="."]
 layout_mode = 2
@@ -71,6 +72,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_aoyqf")
 text = "Play Again"
+language = "en_US"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 2

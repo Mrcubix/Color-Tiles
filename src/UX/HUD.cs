@@ -63,7 +63,6 @@ public partial class HUD : Control
 		InitialTime = 120;
 		Score = 0;
 		Time = 120;
-		IsActive = true;
 	}
 
 	public HUD(int score, int time)
@@ -72,7 +71,6 @@ public partial class HUD : Control
 		InitialTime = time;
 		Score = score;
 		Time = time;
-		IsActive = true;
 	}
 
 	public HUD(int time)
@@ -81,7 +79,6 @@ public partial class HUD : Control
 		InitialTime = time;
 		Score = 0;
 		Time = time;
-		IsActive = true;
 	}
 
 	#endregion
@@ -96,15 +93,13 @@ public partial class HUD : Control
 
 	public override void _Process(double delta)
 	{
+		if (!IsActive)
+			return;
+
 		if (Time <= 0)
 		{
-			if (IsActive)
-			{
-				TimeExpired?.Invoke(this, EventArgs.Empty);
-				IsActive = false;
-			}
-			else
-				return;
+			TimeExpired?.Invoke(this, EventArgs.Empty);
+			IsActive = false;
 		}
 
 
