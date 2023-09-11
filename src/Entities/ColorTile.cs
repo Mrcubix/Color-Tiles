@@ -5,7 +5,8 @@ namespace ColorTiles.Entities
 	public partial class ColorTile
 	{
 		public const int TILEMAP_WIDTH = 3;
-		public const int TILEMAP_HEIGHT = 3;
+		public const int TILEMAP_HEIGHT = 4;
+		public const int TILEMAP_BACKGROUND_START = 9;
 
 		public Vector2I Position { get; set; }
 		public Vector2I AtlasCoordinates { get; set; }

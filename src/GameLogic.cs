@@ -209,6 +209,11 @@ namespace ColorTiles
                 {
                     var tilesToGenerate = TILE_OF_COLOR;
 
+                    var tileIndex = j * ColorTile.TILEMAP_WIDTH + i;
+
+                    if (tileIndex > ColorTile.TILEMAP_BACKGROUND_START)
+                        continue;
+
                     // while there are still tiles to generate
                     while (tilesToGenerate > 0)
                     {
